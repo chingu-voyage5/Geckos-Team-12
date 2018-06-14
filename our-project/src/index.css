@@ -2,18 +2,22 @@
   height: 100%;
 }
 
-#state {
-  width: 200px;
-  float: left;
-}
+
 
 #heading{
  margin-left: 50px;
 }
 
+#formColumn{
+  align-content: left;
+  margin-right: 500px;
+
+}
 #map {
+  margin-top: 50px;
   margin-left: 200px;
   margin-right: 50px; 
+  
 }
 
 html, body {
@@ -92,6 +96,17 @@ html, body {
 }
 
 #state{
+  margin-left: 40px;
+  margin-top: 40px;
+  
+  width: 200px;
+  float: left;
+
+}
+
+#locationsdashboard{
+  width: 200px;
+  float: left;
   margin-left: 40px;
   margin-top: 40px;
 }

@@ -1,5 +1,51 @@
 import React from 'react';
 import './index.css';
+//import { Button, Checkbox, Form } from 'semantic-ui-react'
+
+class LocationsDashboard extends React.Component {
+  render() {
+    return (
+    //   <Form>
+    //   <Form.Field>
+    //     <label>First Name</label>
+    //     <input placeholder='First Name' />
+    //   </Form.Field>
+    //   <Form.Field>
+    //     <label>Last Name</label>
+    //     <input placeholder='Last Name' />
+    //   </Form.Field>
+    //   <Form.Field>
+    //     <label>Describe what you're doing</label>
+    //     <input placeholder='Description' />
+    //   </Form.Field>
+    //   <Form.Field>
+    //     <label>Location</label>
+    //     <input id="pac-input" type="text" placeholder="LocationsDashboard enter a location"/>
+    //   </Form.Field>
+    //   <Button type='submit'>Submit</Button>
+    // </Form>
+
+<input id="pac-input" type="text" placeholder="LocationsDashboard enter a location"/>
+
+
+      //<div id='pac-container'>
+      
+      //</div>
+      // <div className="ui three column centered grid" id="formColumn">
+      // {/*'ui three column centered grid'*/}
+      //   <div className='column'>
+      //   <div id='pac-container'>
+      //     <input id="pac-input" type="text" placeholder="LocationsDashboard enter a location"/>
+      //   </div>
+      //   {/*        <EditableLocationList />
+      //   <ToggleableLocationForm 
+      //     isOpen={true}
+      //   />*/}
+      //   </div>
+      // </div>
+    );
+  }
+};
 
 export default class App extends React.Component {
   // structure: state, didMount, render left and right divs 
@@ -37,7 +83,8 @@ export default class App extends React.Component {
 
     let marker = new window.google.maps.Marker({
       map: map,
-      position: {lat: 45.5228, lng: -122.6762},
+      position: {lat: 45.5228, lng: -122.6462},
+
     });
     
     // initialize the autocomplete functionality using the #pac-input input box
@@ -92,7 +139,7 @@ export default class App extends React.Component {
         </div>
 
         <div id="state">
-          <LocationsDashboard />
+          
           <p>
             zoom level: {this.state.zoom}
             <br />
@@ -103,33 +150,26 @@ export default class App extends React.Component {
             Location: {this.state.place_location}
           </p>
         </div>
-
-        <div id='pac-container'>
-          <input id="pac-input" type="text" placeholder="enter a location"/>
+        
+        <div id="locationsdashboard">
+        <LocationsDashboard />
         </div>
+        
 
-        <div id='map' />{/*map*/}
+        {/* <div id='pac-container'>
+          <input id="pac-input" type="text" placeholder="enter a location"/>
+        </div> */}
+
+        {/* map goes in here */}
+        <div id='map' />
       </div>//app
     ); 
   } 
 };
 
-class LocationsDashboard extends React.Component {
-  render() {
-    return (
-      <div className='ui three column centered grid'>
-        <div className='column'>
-        {/*
-        <EditableLocationList />
-        <ToggleableLocationForm 
-          isOpen={true}
-        />
-        */}
-        </div>
-      </div>
-    );
-  }
-};
+
+
+{/*
 
 class ToggleableLocationForm extends React.Component {
   render() {
@@ -152,7 +192,7 @@ class ToggleableLocationForm extends React.Component {
 class EditableLocationList extends React.Component {
   render() {
     return (
-      <div id='timers'>
+      <div id='locationsDiv'>
         <EditableLocation
           title='your event here'
           project=''
@@ -167,6 +207,7 @@ class EditableLocationList extends React.Component {
           runningSince={null}
           editFormOpen={true}
         />
+
       </div>
     );
   }
@@ -228,7 +269,7 @@ class Location extends React.Component {
 
 class LocationForm extends React.Component {
   render() {
-    const submitText = this.props.title ? 'Update' : 'Create';
+    const submitText = this.props.title? 'Update' : 'Create';
     return (
       <div className='ui centered card'>
         <div className='content'>
@@ -255,3 +296,4 @@ class LocationForm extends React.Component {
     );
   }
 }
+*/}
